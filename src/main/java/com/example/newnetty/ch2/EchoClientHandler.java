@@ -21,8 +21,8 @@ public class EchoClientHandler
     @Override
     public void channelRead0(ChannelHandlerContext ctx, ByteBuf in) {
         //记录已接收消息的转储
-        System.out.println(
-                "Client received: " + in.toString(CharsetUtil.UTF_8));
+        System.out.println(in.readByte());
+
     }
 
     @Override
