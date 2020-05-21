@@ -151,7 +151,6 @@ public class GZipUtil {
         while ((count = gis.read(data, 0, BUFFER)) != -1) {
             os.write(data, 0, count);
         }
-
         gis.close();
     }
 
