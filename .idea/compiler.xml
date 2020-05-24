@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="client" />
+        <module name="threat" />
+        <module name="server" />
+        <module name="jpa" />
+        <module name="utils" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="client" target="1.5" />
+      <module name="jpa" target="1.5" />
+      <module name="newnetty" target="1.5" />
+      <module name="server" target="1.5" />
+      <module name="threat" target="1.5" />
+      <module name="utils" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="client" options="-parameters" />
+      <module name="jpa" options="-parameters" />
+      <module name="server" options="-parameters" />
+      <module name="threat" options="-parameters" />
+      <module name="utils" options="-parameters" />
+    </option>
+  </component>
+</project>
