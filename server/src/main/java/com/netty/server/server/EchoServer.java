@@ -1,4 +1,4 @@
 package com.netty.server.server;
 
-public class Test {
+public class EchoServer {
 }
