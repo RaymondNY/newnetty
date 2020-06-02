@@ -17,12 +17,13 @@ public class Test {
 //    int PROPAGATE = -3//表示下一次共享式同步状态获取将会无条件传播下去
 //    int INITIAL = 0;//初始状态
     private static ReentrantLock lock = new ReentrantLock();
-    public static void main(String[] args) {
-        for (int i = 0; i < 5; i++) {
+    public static void main(String[] args) throws InterruptedException {
+        for (int i = 0; i < 2; i++) {
             Thread thread = new Thread(() -> {
                 lock.lock();
                 try {
-                    Thread.sleep(1000000);
+                    System.out.println(11111);
+                    Thread.sleep(20000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
@@ -30,6 +31,7 @@ public class Test {
                 }
             });
             thread.start();
+            //Thread.sleep(1000000000);
         }
     }
 }
