@@ -18,20 +18,8 @@ public class Test {
 //    int INITIAL = 0;//初始状态
     private static ReentrantLock lock = new ReentrantLock();
     public static void main(String[] args) throws InterruptedException {
-        for (int i = 0; i < 2; i++) {
-            Thread thread = new Thread(() -> {
-                lock.lock();
-                try {
-                    System.out.println(11111);
-                    Thread.sleep(20000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } finally {
-                    lock.unlock();
-                }
-            });
-            thread.start();
-            //Thread.sleep(1000000000);
-        }
+
+        String os = System.getProperty("os.name");
+        System.out.println(os);
     }
 }
